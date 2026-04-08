@@ -1,0 +1,129 @@
+/* ============================
+  Sektion: Klarheitspunkt: 
+============================= */
+.scrolly {
+  position: relative;
+  padding: 0;
+  background: #000;
+}
+
+.scrolly__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scrolly__veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient( to bottom, rgba(239, 239, 239, 0), rgba(120, 57, 173, 0.18) 40%, rgba(110, 81, 175, 0.07) );
+  
+}
+
+/* Vogel: Start unsichtbar + rechts unten geparkt, wird per Scroll bewegt */
+.scrolly__anim{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(120px, 18vw, 280px);
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 18px 35px rgba(50, 98, 149, 0.45));
+  will-change: transform, opacity;
+
+  /* Startwerte (werden von JS überschrieben) */
+  --tx: 0px;
+  --ty: 0px;
+
+  transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scaleX(-1);
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.scrolly__anim.is-visible{
+  opacity: 1;
+}
+
+.scrolly__einfliegtexts {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3vw, 40px);
+  z-index: 3;
+}
+
+.einfliegtext {
+  min-height: 60vh; /*Schnelligkeit des Einblendes der Textfelder*/
+  display: grid;
+  align-items: center;
+  padding: 12vh 0;
+  color: white;
+}
+
+article.einfliegtext {
+  text-align: center;
+  justify-content: center;
+}
+
+.einfliegtext > * {
+  margin: 0 0 10px 0;
+}
+
+.einfliegtext {
+  opacity: 0.12;
+  transform: translateY(24px);
+  transition: opacity 500ms ease, transform 650ms ease;
+}
+
+.einfliegtext.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.einfliegtext p {
+  max-width: 60ch;
+  margin: 0;
+  padding: 14px 16px;
+  background: rgba(151, 81, 153, 0.8);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+}
+
+@media (min-width: 900px) {
+  .einfliegtext:nth-child(odd) p { margin-left: 0; }
+  .einfliegtext:nth-child(even) p { margin-left: auto; }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .einfliegtext, .scrolly__anim { transition: none; }
+}
+
+/*VIDEO*/
+.scrolly__bgVideo{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform: scale(1.02);
+}
+
+.no-video .scrolly__bgVideo { display: none; }
+
+.no-video .scrolly__sticky {
+  background: url("../assets/pics/blumenwiese.jpg") center / cover no-repeat;
+}
+
+.scrolly__bgVideo{ z-index: 0; }
+.scrolly__veil{ z-index: 1; }
+.scrolly__anim{ z-index: 2; }
+
+/* nur das letzte Textfeld (data-anim="3") bekommt mehr Scrollstrecke */
+.einfliegtext[data-anim="3"]{
+  min-height: 90vh;
+  padding: 16vh 0;
+}
