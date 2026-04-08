@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Denise Friedrich</title>
+  <meta name="description" content="Portfolio von Denise Friedrich mit Web-, 3D/Video- und Print-Projekten." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body id="top">
+
+  <!--Passwortschutz + Overlay-->
+  <div id="passwordOverlay">
+    <div class="password-box">
+      <h2>Passwort eingeben</h2>
+      <input type="password" id="pwInput" placeholder="Passwort">
+      <button onclick="checkPassword()">OK</button>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Zur Startseite">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Denise Friedrich</span>
+      </a>
+
+      <!-- CSS-only Mobile Menu -->
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+      <label class="nav-toggle-label" for="nav-toggle" aria-label="Menü öffnen/schließen">
+        <span></span>
+      </label>
+
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <a href="#projects" class="nav-cta">Projekte</a>
+        <a href="#services">Kompetenzen</a>
+        <a href="#about">Über mich</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolio</p>
+          <h1>Denise Friedrich</h1>
+          <h2 class="accent">
+            <span>Mediengestalterin</span><br>
+            <span>Fachrichtung Digitalmedien</span>
+          </h2>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">Projekte ansehen</a>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-label="Vorschau">
+          <img src="assets/img/Denise_Friedrich_Portrait.png" alt="Vorschau: Website-Projekt" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJEKTE -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Ausgewählte Projekte</h2>
+        </div>
+
+        <!-- WICHTIG: inputs must be siblings of .filters AND .projects -->
+        <input class="filter-input" type="radio" name="filter" id="f-all" checked>
+        <input class="filter-input" type="radio" name="filter" id="f-web">
+        <input class="filter-input" type="radio" name="filter" id="f-3d">
+        <input class="filter-input" type="radio" name="filter" id="f-print">
+
+        <div class="filters" role="group" aria-label="Projektfilter">
+          <label for="f-all">Alle</label>
+          <label for="f-web">Web</label>
+          <label for="f-3d">3D/Video</label>
+          <label for="f-print">Print</label>
+        </div>
+
+        <div class="grid projects">
+          <!-- WEB: Onepager Luzides Träumen -->
+          <article class="card project cat-web">
+            <img src="assets/img/Storytelling_Luzide_Traeume.jpg" alt="Vorschau: Website-Projekt" loading="lazy" />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="web-btn">Web</span>
+                <span class="year">2026</span>
+              </div>
+              <h3 class="card-title">Storytelling-Onepager<br>Luzides Träumen</h3>
+              <p class="card-text">
+                Schulprojekt: Fiktiver Onepager mit Scrolleffekten.
+              </p>
+
+              <dl class="stack">
+                <div><dt>Software</dt><dd>Figma, VS Code, Adobe Firefly, Affinity Designer, ChatGPT</dd></div>
+                <div><dt>Technik</dt><dd>HTML, CSS, JS</dd></div>
+              </dl>
+
+              <div class="card-actions">
+                <a class="btn small" href="Luzide_Traeume/index.html" target="_blank" rel="noopener"> Webseite ansehen</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRINT: Tetrapack Heidelbeere -->
+          <article class="card project cat-print">
+            <img src="assets/img/heidelbeere/Titelbild_Pfanner_Icetea_Heidelbeere.jpg" alt="Vorschau: Print-Layout" loading="lazy" />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="print-btn">Print</span>
+                <span class="year">2026</span>
+              </div>
+              <h3 class="card-title">Design Tetrapack Special Edition "Heidelbeere"</h3>
+              <p class="card-text">
+                Teilnahme am Gestaltungswettbewerb für Pfanner Icetea Heidelbeere Special Edition.
+              </p>
+
+              <dl class="stack">
+                <div><dt>Software</dt><dd>Affinity</dd></div>
+                <div><dt>Technik</dt><dd>Vektoren mit Pfaden bauen</dd></div>
+              </dl>
+
+              <div class="card-actions">
+                <a class="btn small" href="#" 
+                data-images="assets/img/heidelbeere/Pfanner_Icetea_Heidelbeere.jpg, assets/img/heidelbeere/Heidelbeere_Pfanner_Avatar01.jpg, assets/img/heidelbeere/Heidelbeere_Pfanner_Avatar02.jpg, assets/img/heidelbeere/Heidelbeere_Pfanner_Avatar03.jpg">
+                Bilder ansehen
+               </a>
+              </div>
+            </div>
+          </article>
+          
+          <!-- 3D: Heidelbeere -->
+          <article class="card project cat-3d">
+            <img src="assets/img/Animated_Avatar_Heidelbeere_2026.jpg" alt="Vorschau: Branding/Print" loading="lazy" />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="video-btn">3D/Video</span>
+                <span class="year">2026</span>
+              </div>
+              <h3 class="card-title">Avatar "Heidelbeere"</h3>
+              <p class="card-text">
+                Kurzer Loop von einem animierten 3D-Avatar, passend zum Pfanner Icetea Tetrapack.
+              </p>
+
+              <dl class="stack">
+                <div><dt>Software</dt><dd>Blender</dd></div>
+                <div><dt>Technik</dt><dd>Modeling, Texturing, Rigging, Lighting, Animation</dd></div>
+              </dl>
+
+              <div class="card-actions">
+                <a class="btn small" href="#" data-video="assets/video/Heidelbeere_Avatar_Denise_Friedrich.mp4" data-loop="true">Video ansehen</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- WEB: Brauhaus Coburg -->
+          <article class="card project cat-web">
+            <img src="assets/img/brauhaus/Titelbild_Website_brauhaus.jpg" alt="Vorschau: Website-Projekt" loading="lazy" />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="web-btn">Web</span>
+                <span class="year">2026</span>
+              </div>
+              <h3 class="card-title">Webseite <br>für Brauhaus zu Coburg </h3>
+              <p class="card-text">• Alte Website moderner gestaltet <br>• Coporate-Design-Heftchen erstellt</p>
+              <dl class="stack">
+                <div><dt>Software</dt><dd>Wordpress (Enfold)</dd></div>
+                <div><dt>Technik</dt><dd>CSS</dd></div>
+              </dl>
+              <div class="card-actions">
+                <a class="btn small" href="https://brauhaus-coburg.de/" target="_blank"> Webseite ansehen</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- WEB: Robert Hofmann GmbH -->
+          <article class="card project cat-web">
+            <img src="assets/img/robert-hofmann/Titelbild_Website_Robert_Hofmann.jpg" alt="Vorschau: Website-Projekt" loading="lazy" />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="web-btn">Web</span>
+                <span class="year">2025</span>
+              </div>
+              <h3 class="card-title">Webseite <br>für Hofmann </h3>
+              <p class="card-text">• Website von Typo3 auf Wordpress umbauen <br>• Website übersetzt
+              </p>
+              <dl class="stack">
+                <div><dt>Software</dt><dd>Wordpress (Enfold), WPML</dd></div>
+                <div><dt>Technik</dt><dd>CSS</dd></div>
+              </dl>
+              <div class="card-actions">
+                <a class="btn small" href="https://www.r-hofmann.de/" target="_blank"> Webseite ansehen</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- WEB: Seco Sensor -->
+          <article class="card project cat-web">
+            <img src="assets/img/seco/Titelbild_Website_seco.jpg" alt="Vorschau: Website-Projekt" loading="lazy" />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="web-btn">Web</span>
+                <span class="year">2025</span>
+              </div>
+              <h3 class="card-title">Webseite <br>für Seco Sensor </h3>
+              <p class="card-text">• Beim Aufbau der Website unterstützen <br>• Bilder generieren <br>• Wandler-Bilder freistellen</p>
+              <dl class="stack">
+                <div><dt>Software</dt><dd>Wordpress (Enfold), WPML</dd></div>
+                <div><dt>Technik</dt><dd>CSS</dd></div>
+              </dl>
+              <div class="card-actions">
+                <a class="btn small" href="https://www.seco-sensor.de/" target="_blank"> Webseite ansehen</a>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- WEB: Junghans -->
+          <article class="card project cat-web">
+            <img src="assets/img/junghans/Titelbild_Website_junghans.jpg" alt="Vorschau: Website-Projekt" loading="lazy" />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="web-btn">Web</span>
+                <span class="year">2025</span>
+              </div>
+              <h3 class="card-title">Webseite <br>für Junghans </h3>
+              <p class="card-text">• Entwicklung der Idee "Formhans" <br>• Unterstützung beim Aufbau der Website <br>• Fotografin beim Shooting unterstützt</p>
+              <dl class="stack">
+                <div><dt>Software</dt><dd>Wordpress (Enfold)</dd></div>
+                <div><dt>Technik</dt><dd>CSS</dd></div>
+              </dl>
+              <div class="card-actions">
+                <a class="btn small" href="https://www.junghans-kurt.de/" target="_blank"> Webseite ansehen</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- WEB: Callcenter Datex Perfekt -->
+          <article class="card project cat-web">
+            <img src="assets/img/datex/Titelbild_Website_datex.jpg" alt="Vorschau: Website-Projekt" loading="lazy" />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="web-btn">Web</span>
+                <span class="year">2024</span>
+              </div>
+              <h3 class="card-title">Webseite <br>für Datex Perfekt</h3>
+              <p class="card-text">• Bildgenerierung <br>• Unterstützung beim Aufbau der Website <br> • Bildideen für die Hummelszenen</p>
+              <dl class="stack">
+                <div><dt>Software</dt><dd>Wordpress (Enfold)</dd></div>
+                <div><dt>Technik</dt><dd>CSS</dd></div>
+              </dl>
+              <div class="card-actions">
+                <a class="btn small" href="https://www.datex-perfekt.de/" target="_blank"> Webseite ansehen</a>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- WEB: Met Honigwein -->
+          <article class="card project cat-web">
+            <img src="assets/img/honigwein/Titelbild_Website_hongiwein.jpg" alt="Vorschau: Website-Projekt" loading="lazy" />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="web-btn">Web</span>
+                <span class="year">2024</span>
+              </div>
+              <h3 class="card-title">Webseite <br>für Sabine Scholz </h3>
+              <p class="card-text">• Idee mit Kunden entwickelt<br>• Neue Website gebaut<br>• Schulung des Kunden</p>
+              <dl class="stack">
+                <div><dt>Software</dt><dd>Wordpress (GoodLayers), Adobe Firefly, Photoshop</dd></div>
+                <div><dt>Technik</dt><dd>CSS</dd></div>
+              </dl>
+              <div class="card-actions">
+                <a class="btn small" href="https://www.met-honig-wein.de/" target="_blank"> Webseite ansehen</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRINT: Met Honigwein -->
+          <article class="card project cat-print">
+            <img src="assets/img/honigwein/Titelbild-Honigwein-Scholz.jpg" alt="Vorschaubild zu Flyer und Visitenkarte von Met Honigwein" loading="lazy" />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="print-btn">Print</span>
+                <span class="year">2024</span>
+              </div>
+              <h3 class="card-title">Printprodukte für <br>Sabine Scholz</h3>
+              <p class="card-text">Flyer und Visitenkarte im CD des Kunden.</p>
+              <dl class="stack">
+                <div><dt>Software</dt><dd>Affinity</dd></div>
+                <div><dt>Technik</dt><dd>Gestaltung, Bildbearbeitung</dd></div>
+              </dl>
+              <div class="card-actions">
+                <a class="btn small" href="#" 
+                data-images="assets/img/honigwein/Flyer-Honigwein-Scholz.jpg,assets/img/honigwein/Visitenkarte-Honigwein-Scholz.jpg">
+                Bilder ansehen
+               </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- VIDEO: Kurzfilm Joggen -->
+          <article class="card project cat-3d">
+            <img src="assets/img/Joggen_Videoschnitt_Schulprojekt.jpg" alt="Vorschau: 3D-Render" loading="lazy" />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="video-btn">3D/Video</span>
+                <span class="year">2023</span>
+              </div>
+              <h3 class="card-title">Kurzfilm "Joggen"</h3>
+              <p class="card-text">Videodreh und -schnitt als Schulprojekt mit der 5-Shot-Methode.</p>
+              <dl class="stack">
+                <div><dt>Software</dt><dd>Adobe Premiere Pro</dd></div>
+                <div><dt>Technik</dt><dd>Eigene Videos, Schnitt</dd></div>
+                <div><dt>Mitwirkende</dt><dd>Nele Friedrich</dd></div>
+              </dl>
+              <div class="card-actions">
+                <a class="btn small" href="#" data-video="assets/video/Joggen_Denise_Friedrich.mp4">Video ansehen</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3D: Donut-->
+          <article class="card project cat-3d">
+            <img src="assets/img/Animated_Donut_2023.jpg" alt="Vorschau: Motion/Video" loading="lazy" />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="video-btn">3D/Video</span>
+                <span class="year">2023</span>
+              </div>
+              <h3 class="card-title">Donut-Animation</h3>
+              <p class="card-text">Kurzer Clip einer 3D-Animation ohne Sound.</p>
+              <dl class="stack">
+                <div><dt>Software</dt><dd>Blender</dd></div>
+                <div><dt>Technik</dt><dd>Modeling, Texturing, Lighting, Animation</dd></div>
+              </dl>
+              <div class="card-actions">
+                <a class="btn small" href="#" data-video="assets/video/Animated_3D-Donut_Denise_Friedrich.mp4" data-loop="true">Video ansehen</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- VIDEO: Spielzeughersteller Heunec -->
+          <article class="card project cat-3d">
+            <img src="assets/img/IHK_Contest_2023_Spielzeughersteller.jpg" alt="Vorschaubild zum YouTube-Video Projektname" loading="lazy" />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="video-btn">3D/Video</span>
+                <span class="year">2023</span>
+              </div>
+              <h3 class="card-title">Was macht ein Spielzeughersteller?</h3>
+              <p class="card-text">Ein Video gedreht für den IHK Video Contest 2023 als Spielzeughersteller bei Heunec.</p>
+              <dl class="stack">
+                <div><dt>Software</dt><dd>YouCut</dd></div>
+                <div><dt>Technik</dt><dd>Regie, Filmaufnahme, Schnitt, Audio</dd></div>
+                <div><dt>Mitwirkende</dt><dd>Tamara Voß</dd></div>
+              </dl>
+              <div class="card-actions">
+                <a
+                  class="btn small"
+                  href="https://youtu.be/FkZVJyz-Ypw?si=CCdk-QtRKjcpwCEa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube-Video Projektname in neuem Tab öffnen">
+                  Auf YouTube ansehen
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KOMPETENZEN -->
+    <section id="services" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Kompetenzen</h2>
+          <p class="muted">In folgenden Bereichen sammelte ich in den letzten Jahren Erfahrungen:</p>
+        </div>
+
+        <div class="grid features">
+          <article class="feature">
+            <h3>Web / UI</h3>
+            <p>Responsive Layouts, Performance & A11y.</p>
+            <div class="chips">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">Figma</span>
+              <span class="chip">Wordpress</span>
+            </div>
+          </article>
+          <article class="feature">
+            <h3>3D / Video</h3>
+            <p>Renderings und kurze Clips.</p>
+            <div class="chips">
+              <span class="chip">Blender</span>
+              <span class="chip">Adobe Premiere Pro</span>
+            </div>
+          </article>
+          <article class="feature">
+            <h3>Print</h3>
+            <p>Typografie, Druckdaten und Corporate Design.</p>
+            <div class="chips">
+              <span class="chip">Affinity</span>
+              <span class="chip">Adobe Firefly</span>
+              <span class="chip">Adobe Photoshop</span>
+              <span class="chip">Adobe InDesign</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÜBER MICH -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="muted">
+          <h2>Über mich</h2>
+          <h3 class="accent">Hey, ich bin Denise.</h3>
+          <p>Ich stehe kurz vor dem Abschluss meiner <span class="accent">Ausbildung zur Mediengestalterin für Digitalmedien</span> bei der Agentur Logan Five GmbH. <br>In dieser Zeit durfte ich ... </p>  
+          <ul>
+              <li>Websites mit WordPress umsetzen</li>
+              <li>Printprodukte gestalten</li>
+              <li>Erfahrungen im Social-Media- und Video-Bereich sammeln</li>
+              <li>Grundlagen in Blender (3D) erlernen</li>
+            </ul>
+          <p>Besonders spannend finde ich, dass Websiten nicht nur gut aussehen, sondern durch SEO-Optimierung auch wirklich sichtbar sind.</p>
+        </div>
+
+        <div>
+          <h3>Hobbys</h3>
+          <div class="chips hobbies">
+            <span class="chip">Lesen</span>
+            <span class="chip">Schreiben</span>
+            <span class="chip">Zeichnen</span>
+            <span class="chip">Malen</span>
+            <span class="chip">Badminton</span>
+            <span class="chip">Gym</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted small">© 2026 Denise Friedrich • Portfolio</p>
+      <a class="muted small" href="#top">Nach oben ↑</a>
+    </div>
+  </footer>
+
+  <!-- VIDEO MODAL -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-content">
+      <button class="video-close" id="videoClose" aria-label="Video schließen">×</button>
+      <video id="modalVideo" controls>
+        <source src="" type="video/mp4">
+        Dein Browser unterstützt kein HTML5-Video.
+      </video>
+    </div>
+  </div>
+
+  <!-- BILD MODAL -->
+  <div class="image-modal" id="imageModal">
+    <div class="image-modal-content">
+      <button class="image-close" id="imageClose">×</button>
+      <img id="modalImage" src="" alt="">
+      <div class="image-nav">
+        <button id="prevImg">←</button>
+        <button id="nextImg">→</button>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+  
+</body>
+</html>
