@@ -1,7 +1,7 @@
 /*PASSWORTSCHUTZ*/
 function checkPassword(){
   const pw = document.getElementById("pwInput").value;
-  if(pw === "meinpasswort123"){
+  if(pw === "PortfolioDemo2026!*"){
     document.getElementById("passwordOverlay").style.display = "none";
   } else {
     alert("Falsches Passwort");
